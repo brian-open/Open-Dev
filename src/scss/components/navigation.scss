@@ -1,0 +1,90 @@
+/*
+|--------------------------------------------------
+| Top Nav
+|--------------------------------------------------
+*/
+
+/*
+|--------------------------------------------------
+| Modal Naigation
+|--------------------------------------------------
+*/
+body {
+    &.opened {
+        position: fixed;
+        width:100%;
+    }
+}
+.full-menu {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+    background: #222;
+    z-index: 998;
+    height: 100vh;
+    opacity: 0;
+    overflow: hidden;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+    visibility: hidden;
+    opacity: 0;
+    &.modal-open {
+        visibility: visible;
+        opacity: 1;
+        overflow-y: scroll;
+    }
+    .modal-menu-container {
+        display: block;
+        padding:300px 0px 80px;
+        @include for-tablet-portrait {
+            padding:200px 60px 80px;
+        }
+        @include for-phone-ld {
+            padding:100px 30px 80px;
+        }
+        .max-width {
+            overflow: hidden;
+            max-width:780px;
+        }
+        nav {
+            ul {
+                li {
+                    margin:0;
+                    padding:0;
+                    text-align: left;
+                    display: block;
+                    text-transform: uppercase;
+                    font-size:22px;
+                    margin-bottom:10px;
+                    &:after {
+                        content:none;
+                    }
+                    a {
+                        padding-right:20px;
+                        background: transparent -webkit-gradient(linear,left top,right top,color-stop(50%,#fff),color-stop(0,rgba(156,158,165,.6))) no-repeat;
+                        background: transparent linear-gradient(90deg,#fff 50%,rgba(156,158,165,.6) 0) no-repeat;
+                        background-size: 202% 1px;
+                        background-position: 100% 100%;
+                        border: none;
+                        font-size: inherit;
+                        padding: 0 0 2px;
+                        -webkit-transition: all .3s;
+                        transition: all .3s;
+                        display: block;
+                        width:100%;
+                        &:hover {
+                            color:#ccc;
+                            background-position: 0 100%;
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+}
+
