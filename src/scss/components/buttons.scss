@@ -9,21 +9,25 @@ a {
         @include transition(all 0.3s);
         }
         span {
-          
+
+        }
+        button {
+
         }
         &:hover {
 
         }
-    }
+    
     &:hover {
         article {
             
-        }
     }
-}
-button {
+        button {
 
-}
+        }        
+    }
+}    
+
 
 /*
 |--------------------------------------------------
