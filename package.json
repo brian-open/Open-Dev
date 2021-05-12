@@ -39,6 +39,6 @@
         "jquery": "^3.4.1",
         "jquery-waypoints": "^2.0.5",
         "scroll-triggers": "^4.2.0",
-        "swiper": "^5.1.0"
+        "swiper": "^6.5.1"
     }
 }
